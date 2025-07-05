@@ -1,18 +1,18 @@
- LangChain Project
+# LangChain Project
 
-This project demonstrates the use of the LangChain library with various models and prompts to interact with a language model.
+This project demonstrates various use cases of the LangChain library with the Groq API, showcasing different ways to interact with language models.
 
 ## Project Structure
-.env .gitignore 1.py 2.py 3.py 4.py 5.py requirements.txt
+
 ### Files
 
-- **1.py**: Basic interaction with the model using user input from the console.
-- **2.py**: Interaction with the model using predefined messages.
-- **3.py**: Translation example using the model.
-- **4.py**: Math problem-solving example with a custom output parser.
-- **5.py**: Generating a comma-separated list of objects in a category with a custom output parser.
-- **requirements.txt**: List of dependencies required for the project.
-- **.env**: Environment variables file containing the API key for the model.
+- **basic_chat.py**: Basic interaction with the Groq model using user input from the console.
+- **system_prompt_injection.py**: Demonstrates system prompt injection and multi-turn conversations with the model.
+- **language_translator.py**: Translation example using a prompt template for language translation tasks.
+- **math_solver.py**: Solves math problems step-by-step with a custom output parser to extract the final answer.
+- **list_generator.py**: Generates a comma-separated list of objects in a given category using a custom output parser.
+- **requirements.txt**: List of Python dependencies required for the project.
+- **.env**: Environment variables file containing the API key for the Groq API.
 
 ## Setup
 
@@ -24,42 +24,43 @@ This project demonstrates the use of the LangChain library with various models a
     pip install -r requirements.txt
     ```
 
-4. Create a `.env` file in the root directory with the following content:
+4. Create a `.env` file in the root directory with your Groq API key:
 
     ```properties
-    GROQ_API_KEY = "your_api_key_here"
+    GROQ_API_KEY="your_api_key_here"
     ```
 
 ## Usage
 
 ### Running the Scripts
 
-- **1.py**: Run the script and enter your message when prompted.
-
+- **Basic Chat** - Interact with the model directly:
     ```sh
-    python 1.py
+    python basic_chat.py
     ```
 
-- **2.py**: Run the script to see the predefined messages interaction.
-
+- **System Prompt Injection** - See how system prompts affect model responses:
     ```sh
-    python 2.py
+    python system_prompt_injection.py
     ```
 
-- **3.py**: Run the script to see the translation example.
-
+- **Language Translator** - Translate text between languages:
     ```sh
-    python 3.py
+    python language_translator.py
     ```
 
-- **4.py**: Run the script to see the math problem-solving example.
-
+- **Math Solver** - Solve math problems with step-by-step working:
     ```sh
-    python 4.py
+    python math_solver.py
     ```
 
-- **5.py**: Run the script to see the comma-separated list generation example.
-
+- **List Generator** - Generate categorized lists:
     ```sh
-    python 5.py
+    python list_generator.py
     ```
+
+## Requirements
+
+- Python 3.8+
+- Groq API key
+- Dependencies listed in `requirements.txt`
